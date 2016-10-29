@@ -161,7 +161,6 @@ a.btn_red {
 }
 
 .user_login label {
-        display: block;
         margin-bottom: 5px;
 }
 
@@ -181,7 +180,6 @@ a.btn_red {
 }
 
 .user_login input[type="checkbox"]+label {
-        float: left;
 }
 
 .user_login .checkbox {
@@ -205,7 +203,6 @@ a.btn_red {
 }
 
 .user_register label {
-        display: block;
         margin-bottom: 5px;
 }
 
@@ -225,7 +222,6 @@ a.btn_red {
 }
 
 .user_register input[type="checkbox"]+label {
-        float: left;
 }
 
 .user_register .checkbox {
