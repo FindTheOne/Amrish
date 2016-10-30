@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>Find The One- eLearning platform</title>
-
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -29,7 +30,7 @@
 
 </head>
 
-<body>
+<body ng-app = "myModule" ng-controller="myController">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -109,12 +110,12 @@
                         <!-- Username & Password Login form -->
                         <div class="user_login">
                                 <form>
-                                        <label>Email / Username</label>
-                                        <input type="text" />
+                                        <label>Username</label>
+                                        <input type="text" placeholder="Username" ng-model="form.username" required/>
                                         <br />
 
                                         <label>Password</label>
-                                        <input type="password" />
+                                        <input type="password" placeholder="Password" ng-model="form.password" required/>
                                         <br />
 
                                         <div class="checkbox">
@@ -124,7 +125,7 @@
 
                                         <div class="action_btns">
                                                 <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                                <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+                                                <div class="one_half last"><a href="#" class="btn btn_red" ng-click="submitDetails()">Login</a></div>
                                         </div>
                                 </form>
 
