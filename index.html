@@ -135,16 +135,29 @@
                         <div class="user_register">
                                 <form>
                                         <label>Full Name</label>
-                                        <input type="text" />
+                                        <input type="text" placeholder="Amrish Patel" required autofocus/>
                                         <br />
 
                                         <label>Email Address</label>
-                                        <input type="email" />
+                                        <input type="email" placeholder="abc@xyz.com" required/>
                                         <br />
 
                                         <label>Password</label>
-                                        <input type="password" />
+                                        <input type="password" required placeholder="password" id="password"/>
                                         <br />
+
+                                        <label>Enter Password Again</label>
+                                        <input type="password" required placeholder="Confirm Password" id="confirm_password"/>
+                                        <br />
+                                        
+                                        <label id="l_label">Skills you want to learn</label>
+                                        <textarea rows="3" cols="10"></textarea>
+                                        <br />
+
+                                        <label id="t_label">Skills you want to teach</label>
+                                        <textarea rows="3" cols="10"></textarea>
+                                        <br />
+                                        
 
                                         <div class="checkbox">
                                                 <input id="send_updates" type="checkbox" />
@@ -153,8 +166,9 @@
 
                                         <div class="action_btns">
                                                 <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                                <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                                                <div class="one_half last" id="btnSubmit"><input type="submit" class="btn btn_red" >Register</submit></div>
                                         </div>
+
                                 </form>
                         </div>
                 </section>
@@ -236,6 +250,19 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
     <script type="text/javascript" src = "js/login.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {
+            var password = $("#password").val();
+            var confirmPassword = $("#confirm_password").val();
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        });
+    });
+</script>
 
 </body>
 

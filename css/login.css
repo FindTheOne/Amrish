@@ -216,6 +216,12 @@ a.btn_red {
         color: #666;
 }
 
+#l_label{
+        float: left;
+}
+ #t_label{
+        float: left;
+ }
 .user_register input[type="checkbox"] {
         float: left;
         margin-right: 5px;
