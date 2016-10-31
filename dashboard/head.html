@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-</head>
-<body ng-app = "myModule" ng-controller="myController">
+<script>
+function getQueryVariable(variable) {
+	  var query = window.location.search.substring(1);
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    if (pair[0] == variable) {
+	      return pair[1];
+	    }
+	  } 
+	  alert('Query Variable ' + variable + ' not found');
+	}
+var param1var = getQueryVariable("username");
+document.getElementById('username').innerHTML = param1var;
+</script>
 <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -110,7 +108,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Amrish <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-user" ></i> <b id="username"></b> <b class="caret" ></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -150,10 +148,6 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-          <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+          
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-        </body>
-    </html>
+  
